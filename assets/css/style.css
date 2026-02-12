@@ -29,6 +29,13 @@ body {
 
 }
 
+h1, h2, h3 {
+  font-family:'oswals', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #252525;
+}
+
 /* header */
 header {
   background-color: #ffffff;
@@ -46,12 +53,7 @@ header a {
   text-decoration: none;
   color: inherit
 }
-h1 {
-  font-family:'oswals', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #252525;
-}
+
 
 #menu { 
   font-size: 110%;
@@ -103,6 +105,21 @@ main {
   height: 600px;
   width: 100%;
   background: url("../images/hero-image.webp") no-repeat center center/cover; 
+  position: relative;
+}
+#cover-text {
+  /* last value called alpha which determins opacity always use , space and . before the number*/
+  background-color: rgba(241,109,107, .7);
+  font-size: 130%;
+  position: absolute;
+  bottom: 30px; 
+  width: 80%;
+  min-height: 200px;
+  padding-top: 40px;
+  padding-left: 10px;
+}
+#cover-text > h2, #cover-text > h3 { 
+  color: #ffffff;
 }
 
 /* footer */
@@ -150,6 +167,11 @@ main {
   main{ 
     /* push main content down */
     margin-top: 75px;
+  }
+  /* hero image*/
+  #cover-text {
+    width: 300px;
+    right: 50px; 
   }
 }
 /* media quiery: tablets and larger screens 992+ */
