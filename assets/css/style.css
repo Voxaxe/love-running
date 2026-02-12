@@ -1,14 +1,12 @@
- /* Google fonts import */
+/* Google fonts import */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap");
 
 .lato-light {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-
-
 
 /* asterisk wildcard selector to override default styles added by the brwoser*/
 
@@ -20,17 +18,18 @@
 
 /* general styles*/
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    /* generic project styyles */
-    color: #3a3a3a; 
-    font-family: 'lato', sans-serif ;
-
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* generic project styyles */
+  color: #3a3a3a;
+  font-family: "lato", sans-serif;
 }
 
-h1, h2, h3 {
-  font-family:'oswals', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "oswals", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #252525;
@@ -41,52 +40,48 @@ header {
   background-color: #ffffff;
   padding: 0 1rem;
   position: fixed;
-  z-index: 99; 
+  z-index: 99;
   width: 100%;
   box-shadow: 0 2px 2px #3a3a3a;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
 }
 header a {
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
 
-
-#menu { 
+#menu {
   font-size: 110%;
   letter-spacing: 4px;
   list-style-type: none;
 }
 #menu > li {
   margin-bottom: 1em;
-
 }
 .active {
   border-bottom: 1px solid #3a3a3a;
 }
 
-/* navbar styles with dropdown toggle */ 
+/* navbar styles with dropdown toggle */
 
 nav {
   position: absolute;
   background-color: #ffffff;
   width: 100%;
-  left:0;
+  left: 0;
   padding: 0 1rem;
   box-shadow: 0 2px 2px #3a3a3a;
-  display: none; 
-  top: 100%; 
-
+  display: none;
+  top: 100%;
 }
 /* Nav toggle */
 
-#nav-toggle:checked~nav {
+#nav-toggle:checked ~ nav {
   display: block;
 }
-#nav-toggle{
+#nav-toggle {
   display: none;
 }
 .nav-toggle-label {
@@ -95,7 +90,6 @@ nav {
 
 /*main content*/
 main {
-  
   /* makes the main element take up any surplus space to push the footer down*/
   flex: 1 0 auto;
   margin-top: 40px;
@@ -104,15 +98,15 @@ main {
 #hero {
   height: 600px;
   width: 100%;
-  background: url("../images/hero-image.webp") no-repeat center center/cover; 
+  background: url("../images/hero-image.webp") no-repeat center center/cover;
   position: relative;
 }
 #cover-text {
   /* last value called alpha which determins opacity always use , space and . before the number*/
-  background-color: rgba(241,109,107, .7);
+  background-color: rgba(241, 109, 107, 0.7);
   font-size: 130%;
   position: absolute;
-  bottom: 30px; 
+  bottom: 30px;
   width: 80%;
   min-height: 200px;
   padding-top: 40px;
@@ -121,36 +115,77 @@ main {
 #cover-text > h2, #cover-text > h3 { 
   color: #ffffff;
 }
+/* Reasons section */
+#reasons {
+  width: 90%;
+  margin: 20px auto;
+}
+
+#reasons h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 280%;
+}
+
+#benefits-physical > div,
+#benefits-mental > div {
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+#benefits p {
+  padding: 0 20px;
+}
+
+#benefits hr {
+  border-top: 1px solid #3a3a3a;
+  margin: 5px 0;
+}
+#circle-cover-bg {
+  background: url("../images/reasons-image.webp") no-repeat top center/cover;
+  height: 90vw;
+  width: 90vw;
+  margin-bottom: 20px;
+  /* Makes the square image into a circle */
+  border-radius: 50%;
+  max-width: 300px;
+  max-height: 300px;
+}
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* footer */
 
 #social-networks {
   text-align: center;
   padding: 20px 0;
-  display: flex; 
+  display: flex;
   justify-content: space-evenly;
   list-style-type: none;
 }
 
-#social-networks i { 
+#social-networks i {
   font-size: 160%;
   padding: 5%;
   color: #3a3a3a;
 }
 
-
 /* media quiery: tablets and larger screens 768+ */
 @media screen and (min-width: 768px) {
   /*header*/
   nav {
-    display:block;
+    display: block;
     position: relative;
     box-shadow: none;
     width: fit-content;
     padding-right: 1rem;
   }
   #menu {
-    display: flex; 
+    display: flex;
   }
   #menu > li {
     padding-left: 1rem;
@@ -158,27 +193,25 @@ main {
   .nav-toggle-label {
     display: none;
   }
-  #logo{
+  #logo {
     font-size: 280%;
     line-height: 75px;
     margin: 0 0.5rem;
   }
   /*main content*/
-  main{ 
+  main {
     /* push main content down */
     margin-top: 75px;
   }
   /* hero image*/
   #cover-text {
     width: 300px;
-    right: 50px; 
+    right: 50px;
   }
 }
 /* media quiery: tablets and larger screens 992+ */
 @media screen and (min-width: 992px) {
-
   #menu a:hover {
-    border-bottom: 1px solid #3a3a3a; 
-
+    border-bottom: 1px solid #3a3a3a;
   }
 }
